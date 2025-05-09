@@ -8,4 +8,5 @@ $wshShell = New-Object -ComObject WScript.Shell
 # Create the shortcut
 $shortcut = $wshShell.CreateShortcut($shortcutPath)
 $shortcut.TargetPath = $url
+$shortcut.IconLocation = "shell32.dll,15"
 $shortcut.Save()
