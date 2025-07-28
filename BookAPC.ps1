@@ -49,3 +49,6 @@ $shortcut = $wshShell.CreateShortcut($shortcutPath)
 $shortcut.TargetPath = $url
 $shortcut.IconLocation = "%ProgramFiles%\Microsoft Office\Root\VFS\Windows\Installer\{90160000-000F-0000-1000-0000000FF1CE}\pptico.exe"
 $shortcut.Save()
+
+New-Item -Path 'C:\Program Files\uvnc bvba\UltraVNC' -ItemType Directory 
+Invoke-WebRequest 'https://raw.githubusercontent.com/tillyjoanna/PPC/refs/heads/main/background.bmp' -OutFile 'C:\Program Files\uvnc bvba\UltraVNC\Background.bmp'
